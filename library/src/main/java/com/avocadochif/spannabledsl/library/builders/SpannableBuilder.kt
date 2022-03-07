@@ -3,7 +3,6 @@ package com.avocadochif.spannabledsl.library.builders
 import android.content.Context
 import androidx.annotation.StringRes
 import com.avocadochif.spannabledsl.library.anotations.SpannableDSL
-import com.avocadochif.spannabledsl.library.anotations.TextSpanDSL
 import com.avocadochif.spannabledsl.library.extensions.addIf
 import com.avocadochif.spannabledsl.library.models.span.Span
 import com.avocadochif.spannabledsl.library.models.spannable.Spannable
