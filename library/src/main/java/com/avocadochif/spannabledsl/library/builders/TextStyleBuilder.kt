@@ -8,11 +8,12 @@ import com.avocadochif.spannabledsl.library.models.style.TextStyle
 @TextStyleDSL
 class TextStyleBuilder(
     @FontRes var fontResId: Int = -1,
-    @ColorRes var textColorResId: Int = -1
+    @ColorRes var textColorResId: Int = -1,
+    @ColorRes var backgroundColorResId: Int = -1
 ) {
 
     fun build(): TextStyle {
-        return TextStyle(fontResId, textColorResId)
+        return TextStyle(fontResId, textColorResId, backgroundColorResId)
     }
 
     @Suppress("UNUSED_PARAMETER")

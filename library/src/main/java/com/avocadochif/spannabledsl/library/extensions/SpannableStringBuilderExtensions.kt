@@ -4,6 +4,7 @@ import android.content.Context
 import android.os.Build
 import android.text.SpannableStringBuilder
 import android.text.Spanned
+import android.text.style.BackgroundColorSpan
 import android.text.style.ForegroundColorSpan
 import androidx.annotation.ColorRes
 import androidx.annotation.FontRes
@@ -35,6 +36,20 @@ fun SpannableStringBuilder.setForegroundColorSpan(
 ) {
     setSpan(
         ForegroundColorSpan(ContextCompat.getColor(context, textColorResId)),
+        start,
+        end,
+        Spanned.SPAN_EXCLUSIVE_EXCLUSIVE
+    )
+}
+
+fun SpannableStringBuilder.setBackgroundColorSpan(
+    context: Context,
+    @ColorRes backgroundColorResId: Int,
+    start: Int,
+    end: Int
+) {
+    setSpan(
+        BackgroundColorSpan(ContextCompat.getColor(context, backgroundColorResId)),
         start,
         end,
         Spanned.SPAN_EXCLUSIVE_EXCLUSIVE

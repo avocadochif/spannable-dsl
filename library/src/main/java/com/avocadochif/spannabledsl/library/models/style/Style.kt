@@ -7,5 +7,6 @@ sealed class Style
 
 data class TextStyle(
     @FontRes val fontResId: Int,
-    @ColorRes val textColorResId: Int
+    @ColorRes val textColorResId: Int,
+    @ColorRes val backgroundColorResId: Int
 ) : Style()

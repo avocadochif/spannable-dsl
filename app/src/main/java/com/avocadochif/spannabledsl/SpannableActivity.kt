@@ -12,7 +12,11 @@ class SpannableActivity : AppCompatActivity() {
         setContentView(R.layout.activity_spannable)
 
         findViewById<TextView>(R.id.helloTV).spannable {
-            text("Hello")
+            text("Hello") {
+                style {
+                    backgroundColorResId = R.color.teal_200
+                }
+            }
             text(" ")
             text(R.string.world) {
                 style {

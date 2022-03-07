@@ -7,7 +7,7 @@ import com.avocadochif.spannabledsl.library.models.style.TextStyle
 @TextSpanDSL
 class TextSpanBuilder(private val text: String) {
 
-    private var style: TextStyle = TextStyle(-1, -1)
+    private var style: TextStyle = TextStyle(-1, -1, -1)
 
     fun build(): TextSpan {
         return TextSpan(text, style)
