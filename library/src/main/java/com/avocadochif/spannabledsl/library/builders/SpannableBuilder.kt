@@ -18,7 +18,6 @@ class SpannableBuilder(private val context: Context) {
     }
 
     @SpannableDSL
-    @TextSpanDSL
     fun text(text: String = "", init: TextSpanBuilder.() -> Unit = {}) {
         spans.addIf(
             TextSpanBuilder(text).apply(init).build(),
@@ -27,7 +26,6 @@ class SpannableBuilder(private val context: Context) {
     }
 
     @SpannableDSL
-    @TextSpanDSL
     fun text(@StringRes textResId: Int = -1, init: TextSpanBuilder.() -> Unit = {}) {
         spans.addIf(
             TextSpanBuilder(context.getString(textResId)).apply(init).build(),
