@@ -17,6 +17,7 @@ class SpannableActivity : AppCompatActivity() {
             text(R.string.world) {
                 style {
                     fontResId = R.font.fredoka_bold
+                    textColorResId = R.color.purple_200
                 }
             }
             text("!!!") {
