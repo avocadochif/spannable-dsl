@@ -43,6 +43,8 @@ class SpannableActivity : AppCompatActivity() {
                 style {
                     decoration {
                         type = TextDecorationType.UNDERLINE
+                        lineColorResId = R.color.purple_200
+                        underlineThicknessResId = R.dimen.underline_thickness
                     }
                 }
             }

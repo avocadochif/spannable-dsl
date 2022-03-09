@@ -39,7 +39,8 @@ class TextStyleBuilder(
     private fun provideDefaultTextDecoration(): TextDecoration {
         return TextDecoration(
             type = TextDecorationType.NONE,
-            lineColorResId = -1
+            lineColorResId = -1,
+            underlineThicknessResId = -1
         )
     }
 

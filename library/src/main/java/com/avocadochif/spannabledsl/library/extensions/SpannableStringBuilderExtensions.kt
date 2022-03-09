@@ -7,12 +7,14 @@ import android.text.Spanned
 import android.text.style.BackgroundColorSpan
 import android.text.style.ForegroundColorSpan
 import android.text.style.StrikethroughSpan
-import android.text.style.UnderlineSpan
 import androidx.annotation.ColorRes
+import androidx.annotation.DimenRes
 import androidx.annotation.FontRes
+import androidx.annotation.RequiresApi
 import androidx.core.content.ContextCompat
 import androidx.core.content.res.ResourcesCompat
 import com.avocadochif.spannabledsl.library.TypefaceSpan
+import com.avocadochif.spannabledsl.library.UnderlineSpan
 
 fun SpannableStringBuilder.setTypefaceSpan(
     context: Context,
@@ -58,12 +60,32 @@ fun SpannableStringBuilder.setBackgroundColorSpan(
     )
 }
 
+
+@RequiresApi(Build.VERSION_CODES.Q)
+fun SpannableStringBuilder.setUnderlineSpan(
+    context: Context,
+    @ColorRes lineColorResId: Int,
+    @DimenRes underlineThicknessResId: Int,
+    start: Int,
+    end: Int
+) {
+    setSpan(
+        UnderlineSpan(
+            ContextCompat.getColor(context, lineColorResId),
+            context.resources.getDimension(underlineThicknessResId)
+        ),
+        start,
+        end,
+        Spanned.SPAN_EXCLUSIVE_EXCLUSIVE
+    )
+}
+
 fun SpannableStringBuilder.setUnderlineSpan(
     start: Int,
     end: Int
 ) {
     setSpan(
-        UnderlineSpan(),
+        android.text.style.UnderlineSpan(),
         start,
         end,
         Spanned.SPAN_EXCLUSIVE_EXCLUSIVE
