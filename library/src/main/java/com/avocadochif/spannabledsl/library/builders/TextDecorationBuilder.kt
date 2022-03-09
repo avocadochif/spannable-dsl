@@ -1,16 +1,14 @@
 package com.avocadochif.spannabledsl.library.builders
 
-import androidx.annotation.ColorRes
 import com.avocadochif.spannabledsl.library.enums.TextDecorationType
 import com.avocadochif.spannabledsl.library.models.decoration.TextDecoration
 
 class TextDecorationBuilder(
-    var type: TextDecorationType = TextDecorationType.NONE,
-    @ColorRes var lineColorResId: Int = -1
+    var type: TextDecorationType = TextDecorationType.NONE
 ) {
 
     fun build(): TextDecoration {
-        return TextDecoration(type, lineColorResId)
+        return TextDecoration(type)
     }
 
     @Suppress("UNUSED_PARAMETER")
