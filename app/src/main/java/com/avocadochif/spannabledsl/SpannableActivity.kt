@@ -16,7 +16,9 @@ class SpannableActivity : AppCompatActivity() {
             text("Hello") {
                 style {
                     backgroundColorResId = R.color.teal_200
-                    decoration = TextDecorationType.UNDERLINE
+                    decoration {
+                        type = TextDecorationType.UNDERLINE
+                    }
                 }
             }
             text(" ")
@@ -24,7 +26,9 @@ class SpannableActivity : AppCompatActivity() {
                 style {
                     fontResId = R.font.fredoka_bold
                     textColorResId = R.color.purple_200
-                    decoration = TextDecorationType.STRIKETHROUGH
+                    decoration {
+                        type = TextDecorationType.STRIKETHROUGH
+                    }
                 }
             }
             text("!!!") {
@@ -37,7 +41,9 @@ class SpannableActivity : AppCompatActivity() {
             text(R.string.new_line)
             text("underline text") {
                 style {
-                    decoration = TextDecorationType.UNDERLINE
+                    decoration {
+                        type = TextDecorationType.UNDERLINE
+                    }
                 }
             }
             text(R.string.new_line)
@@ -45,7 +51,9 @@ class SpannableActivity : AppCompatActivity() {
             text(R.string.new_line)
             text("strikethrough text") {
                 style {
-                    decoration = TextDecorationType.STRIKETHROUGH
+                    decoration {
+                        type = TextDecorationType.STRIKETHROUGH
+                    }
                 }
             }
         }

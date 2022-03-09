@@ -30,7 +30,7 @@ data class Spannable(val context: Context, val spans: List<Span>) {
                         if (span.style.backgroundColorResId != -1) {
                             setBackgroundColorSpan(context, span.style.backgroundColorResId, start, end)
                         }
-                        when (span.style.decoration) {
+                        when (span.style.decoration.type) {
                             TextDecorationType.UNDERLINE -> setUnderlineSpan(start, end)
                             TextDecorationType.STRIKETHROUGH -> setStrikethroughSpan(start, end)
                             TextDecorationType.NONE -> {}
