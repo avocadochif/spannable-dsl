@@ -1,6 +1,7 @@
 package com.avocadochif.spannabledsl.library.models.span
 
 import android.graphics.drawable.Drawable
+import com.avocadochif.spannabledsl.library.enums.SpanType
 import com.avocadochif.spannabledsl.library.models.style.TextStyle
 
 sealed class Span(val type: SpanType)

@@ -6,6 +6,8 @@ import android.text.SpannableStringBuilder
 import android.text.Spanned
 import android.text.style.BackgroundColorSpan
 import android.text.style.ForegroundColorSpan
+import android.text.style.StrikethroughSpan
+import android.text.style.UnderlineSpan
 import androidx.annotation.ColorRes
 import androidx.annotation.FontRes
 import androidx.core.content.ContextCompat
@@ -50,6 +52,30 @@ fun SpannableStringBuilder.setBackgroundColorSpan(
 ) {
     setSpan(
         BackgroundColorSpan(ContextCompat.getColor(context, backgroundColorResId)),
+        start,
+        end,
+        Spanned.SPAN_EXCLUSIVE_EXCLUSIVE
+    )
+}
+
+fun SpannableStringBuilder.setUnderlineSpan(
+    start: Int,
+    end: Int
+) {
+    setSpan(
+        UnderlineSpan(),
+        start,
+        end,
+        Spanned.SPAN_EXCLUSIVE_EXCLUSIVE
+    )
+}
+
+fun SpannableStringBuilder.setStrikethroughSpan(
+    start: Int,
+    end: Int
+) {
+    setSpan(
+        StrikethroughSpan(),
         start,
         end,
         Spanned.SPAN_EXCLUSIVE_EXCLUSIVE

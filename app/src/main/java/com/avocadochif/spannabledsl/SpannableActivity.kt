@@ -3,6 +3,7 @@ package com.avocadochif.spannabledsl
 import android.os.Bundle
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
+import com.avocadochif.spannabledsl.library.enums.TextDecorationType
 import com.avocadochif.spannabledsl.library.extensions.spannable
 
 class SpannableActivity : AppCompatActivity() {
@@ -15,6 +16,7 @@ class SpannableActivity : AppCompatActivity() {
             text("Hello") {
                 style {
                     backgroundColorResId = R.color.teal_200
+                    decoration = TextDecorationType.UNDERLINE
                 }
             }
             text(" ")
@@ -22,11 +24,28 @@ class SpannableActivity : AppCompatActivity() {
                 style {
                     fontResId = R.font.fredoka_bold
                     textColorResId = R.color.purple_200
+                    decoration = TextDecorationType.STRIKETHROUGH
                 }
             }
             text("!!!") {
                 style {
                     fontResId = R.font.fredoka_bold
+                }
+            }
+            text(R.string.new_line)
+            text(R.string.new_line)
+            text(R.string.new_line)
+            text("underline text") {
+                style {
+                    decoration = TextDecorationType.UNDERLINE
+                }
+            }
+            text(R.string.new_line)
+            text(R.string.new_line)
+            text(R.string.new_line)
+            text("strikethrough text") {
+                style {
+                    decoration = TextDecorationType.STRIKETHROUGH
                 }
             }
         }
