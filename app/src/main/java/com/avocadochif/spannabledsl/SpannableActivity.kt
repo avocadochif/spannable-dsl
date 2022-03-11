@@ -26,6 +26,7 @@ class SpannableActivity : AppCompatActivity() {
                 style {
                     fontResId = R.font.fredoka_bold
                     textColorResId = R.color.purple_200
+                    backgroundColorResId = R.color.teal_200
                     decoration {
                         type = TextDecorationType.STRIKETHROUGH
                     }

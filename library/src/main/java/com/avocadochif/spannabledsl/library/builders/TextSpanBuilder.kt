@@ -1,12 +1,14 @@
 package com.avocadochif.spannabledsl.library.builders
 
 import com.avocadochif.spannabledsl.library.anotations.TextSpanDSL
+import com.avocadochif.spannabledsl.library.anotations.TextStyleDSL
 import com.avocadochif.spannabledsl.library.enums.TextDecorationType
 import com.avocadochif.spannabledsl.library.models.decoration.TextDecoration
 import com.avocadochif.spannabledsl.library.models.span.TextSpan
 import com.avocadochif.spannabledsl.library.models.style.TextStyle
 
 @TextSpanDSL
+@TextStyleDSL
 class TextSpanBuilder(private val text: String) {
 
     private var style: TextStyle = provideDefaultTextStyle()
@@ -16,6 +18,7 @@ class TextSpanBuilder(private val text: String) {
     }
 
     @TextSpanDSL
+    @TextStyleDSL
     fun style(init: TextStyleBuilder.() -> Unit) {
         style = TextStyleBuilder().apply(init).build()
     }
