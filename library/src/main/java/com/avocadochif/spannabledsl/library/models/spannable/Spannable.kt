@@ -27,6 +27,9 @@ data class Spannable(val context: Context, val spans: List<Span>) {
                         if (span.style.textColorResId != -1) {
                             setForegroundColorSpan(context, span.style.textColorResId, start, end)
                         }
+                        if (span.style.textSizeResId != -1) {
+                            setAbsoluteSizeSpan(context, span.style.textSizeResId, start, end)
+                        }
                         if (span.style.backgroundColorResId != -1) {
                             setBackgroundColorSpan(context, span.style.backgroundColorResId, start, end)
                         }

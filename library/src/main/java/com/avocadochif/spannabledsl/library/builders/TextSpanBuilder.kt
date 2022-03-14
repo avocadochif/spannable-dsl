@@ -27,6 +27,7 @@ class TextSpanBuilder(private val text: String) {
         return TextStyle(
             fontResId = -1,
             textColorResId = -1,
+            textSizeResId = -1,
             backgroundColorResId = -1,
             decoration = TextDecoration(
                 type = TextDecorationType.NONE

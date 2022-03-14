@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="world_text_size">24sp</dimen>
+    <dimen name="underline_text_size">24dp</dimen>
+    <dimen name="strikethrough_text_size">24px</dimen>
+</resources>

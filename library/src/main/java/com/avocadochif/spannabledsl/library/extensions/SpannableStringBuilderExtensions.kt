@@ -4,11 +4,9 @@ import android.content.Context
 import android.os.Build
 import android.text.SpannableStringBuilder
 import android.text.Spanned
-import android.text.style.BackgroundColorSpan
-import android.text.style.ForegroundColorSpan
-import android.text.style.StrikethroughSpan
-import android.text.style.UnderlineSpan
+import android.text.style.*
 import androidx.annotation.ColorRes
+import androidx.annotation.DimenRes
 import androidx.annotation.FontRes
 import androidx.core.content.ContextCompat
 import androidx.core.content.res.ResourcesCompat
@@ -44,6 +42,19 @@ fun SpannableStringBuilder.setForegroundColorSpan(
     )
 }
 
+fun SpannableStringBuilder.setAbsoluteSizeSpan(
+    context: Context,
+    @DimenRes textSizeResId: Int,
+    start: Int,
+    end: Int
+) {
+    setSpan(
+        AbsoluteSizeSpan(context.resources.getDimensionPixelSize(textSizeResId), false),
+        start,
+        end,
+        Spanned.SPAN_EXCLUSIVE_EXCLUSIVE
+    )
+}
 fun SpannableStringBuilder.setBackgroundColorSpan(
     context: Context,
     @ColorRes backgroundColorResId: Int,

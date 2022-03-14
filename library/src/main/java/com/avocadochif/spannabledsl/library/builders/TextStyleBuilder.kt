@@ -1,6 +1,7 @@
 package com.avocadochif.spannabledsl.library.builders
 
 import androidx.annotation.ColorRes
+import androidx.annotation.DimenRes
 import androidx.annotation.FontRes
 import com.avocadochif.spannabledsl.library.anotations.TextDecorationDSL
 import com.avocadochif.spannabledsl.library.anotations.TextStyleDSL
@@ -13,13 +14,20 @@ import com.avocadochif.spannabledsl.library.models.style.TextStyle
 class TextStyleBuilder(
     @FontRes var fontResId: Int = -1,
     @ColorRes var textColorResId: Int = -1,
+    @DimenRes var textSizeResId: Int = -1,
     @ColorRes var backgroundColorResId: Int = -1,
 ) {
 
     private var decoration: TextDecoration = provideDefaultTextDecoration()
 
     fun build(): TextStyle {
-        return TextStyle(fontResId, textColorResId, backgroundColorResId, decoration)
+        return TextStyle(
+            fontResId,
+            textColorResId,
+            textSizeResId,
+            backgroundColorResId,
+            decoration
+        )
     }
 
     @TextDecorationDSL

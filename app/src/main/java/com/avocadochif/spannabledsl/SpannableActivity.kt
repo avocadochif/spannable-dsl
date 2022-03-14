@@ -26,6 +26,7 @@ class SpannableActivity : AppCompatActivity() {
                 style {
                     fontResId = R.font.fredoka_bold
                     textColorResId = R.color.purple_200
+                    textSizeResId = R.dimen.world_text_size
                     backgroundColorResId = R.color.teal_200
                     decoration {
                         type = TextDecorationType.STRIKETHROUGH
@@ -42,6 +43,7 @@ class SpannableActivity : AppCompatActivity() {
             text(R.string.new_line)
             text("underline text") {
                 style {
+                    textSizeResId = R.dimen.underline_text_size
                     decoration {
                         type = TextDecorationType.UNDERLINE
                     }
@@ -52,6 +54,7 @@ class SpannableActivity : AppCompatActivity() {
             text(R.string.new_line)
             text("strikethrough text") {
                 style {
+                    textSizeResId = R.dimen.strikethrough_text_size
                     decoration {
                         type = TextDecorationType.STRIKETHROUGH
                     }
