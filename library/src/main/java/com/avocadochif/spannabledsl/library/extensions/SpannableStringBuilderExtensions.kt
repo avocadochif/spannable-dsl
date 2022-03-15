@@ -55,6 +55,7 @@ fun SpannableStringBuilder.setAbsoluteSizeSpan(
         Spanned.SPAN_EXCLUSIVE_EXCLUSIVE
     )
 }
+
 fun SpannableStringBuilder.setBackgroundColorSpan(
     context: Context,
     @ColorRes backgroundColorResId: Int,
@@ -87,6 +88,30 @@ fun SpannableStringBuilder.setStrikethroughSpan(
 ) {
     setSpan(
         StrikethroughSpan(),
+        start,
+        end,
+        Spanned.SPAN_EXCLUSIVE_EXCLUSIVE
+    )
+}
+
+fun SpannableStringBuilder.setQuoteSpan(
+    start: Int,
+    end: Int
+) {
+    setSpan(
+        QuoteSpan(),
+        start,
+        end,
+        Spanned.SPAN_EXCLUSIVE_EXCLUSIVE
+    )
+}
+
+fun SpannableStringBuilder.setBulletSpan(
+    start: Int,
+    end: Int
+) {
+    setSpan(
+        BulletSpan(),
         start,
         end,
         Spanned.SPAN_EXCLUSIVE_EXCLUSIVE

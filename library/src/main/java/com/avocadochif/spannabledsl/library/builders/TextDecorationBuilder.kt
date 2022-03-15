@@ -16,7 +16,7 @@ class TextDecorationBuilder(
         level = DeprecationLevel.ERROR,
         message = "TextDecoration can't be nested."
     )
-    fun decoration(init: TextDecorationBuilder.() -> Unit = {}) {
+    fun textDecoration(init: TextDecorationBuilder.() -> Unit = {}) {
 
     }
 

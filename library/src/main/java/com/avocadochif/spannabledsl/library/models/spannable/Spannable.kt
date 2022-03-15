@@ -2,6 +2,7 @@ package com.avocadochif.spannabledsl.library.models.spannable
 
 import android.content.Context
 import android.text.SpannableStringBuilder
+import com.avocadochif.spannabledsl.library.enums.LineDecorationType
 import com.avocadochif.spannabledsl.library.enums.TextDecorationType
 import com.avocadochif.spannabledsl.library.extensions.*
 import com.avocadochif.spannabledsl.library.models.span.DrawableSpan
@@ -33,10 +34,15 @@ data class Spannable(val context: Context, val spans: List<Span>) {
                         if (span.style.backgroundColorResId != -1) {
                             setBackgroundColorSpan(context, span.style.backgroundColorResId, start, end)
                         }
-                        when (span.style.decoration.type) {
+                        when (span.style.textDecoration.type) {
                             TextDecorationType.UNDERLINE -> setUnderlineSpan(start, end)
                             TextDecorationType.STRIKETHROUGH -> setStrikethroughSpan(start, end)
                             TextDecorationType.NONE -> {}
+                        }
+                        when (span.style.lineDecoration.type) {
+                            LineDecorationType.QUOTE -> setQuoteSpan(start, end)
+                            LineDecorationType.BULLET -> setBulletSpan(start, end)
+                            LineDecorationType.NONE -> {}
                         }
 
                     }

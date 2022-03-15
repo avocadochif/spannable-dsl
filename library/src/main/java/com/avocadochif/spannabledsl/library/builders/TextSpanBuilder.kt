@@ -2,7 +2,9 @@ package com.avocadochif.spannabledsl.library.builders
 
 import com.avocadochif.spannabledsl.library.anotations.TextSpanDSL
 import com.avocadochif.spannabledsl.library.anotations.TextStyleDSL
+import com.avocadochif.spannabledsl.library.enums.LineDecorationType
 import com.avocadochif.spannabledsl.library.enums.TextDecorationType
+import com.avocadochif.spannabledsl.library.models.decoration.LineDecoration
 import com.avocadochif.spannabledsl.library.models.decoration.TextDecoration
 import com.avocadochif.spannabledsl.library.models.span.TextSpan
 import com.avocadochif.spannabledsl.library.models.style.TextStyle
@@ -29,8 +31,11 @@ class TextSpanBuilder(private val text: String) {
             textColorResId = -1,
             textSizeResId = -1,
             backgroundColorResId = -1,
-            decoration = TextDecoration(
+            textDecoration = TextDecoration(
                 type = TextDecorationType.NONE
+            ),
+            lineDecoration = LineDecoration(
+                type = LineDecorationType.NONE
             )
         )
     }
